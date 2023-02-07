@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        header {
+            padding: 10px;
+            text-align: center;
+            background: rgb(130, 241, 138);
+            color: black;
+            font-size: 20px;
+        }
+
+        body {
+            background-color: rgb(187, 255, 192);
+        }
+
+        div {
+            background-size: 100% 100%;
+            margin: auto;
+            padding: 30px;
+            border: 3px solid rgb(13, 3, 50);
+            width: 810px;
+            height: auto;
+            background-color: rgba(156, 223, 208, 0.759);
+        }
+
+        input[type=text] {
+            width: 99%;
+            height: 20px;
+        }
+
+        input[type=submit] {
+            width: 28%;
+            height: 20px;
+            background-color: rgb(200, 199, 236);
+            cursor: cell;
+        }
+
+        select {
+            cursor: grab;
+            width: 12%;
+            height: 20px;
+        }
+
+        form {
+            text-align: left;
+            color: rgb(3, 1, 5);
+        }
+
+        button[type=del] {
+            background-color: #ba1818;
+            border: none;
+            color: white;
+            /* padding: 15px 32px; */
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button[type=edit] {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            /* padding: 15px 32px; */
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>Expense Tracker</h1>
+    </header>
+
+    <hr>
+
+    <div>
+
+        <form id="form">
+            <label for="exAmo">Choose Expense Amount:</label>
+            <input type="text" id="exAmo"> <br> <br>
+            <label for="choDes">Choose Description:</label>
+            <input type="text" id="choDes"> <br> <br>
+            <label for="choCat">Choose a Category:</label>
+            <select id="choCat">
+                <option value="food">Food and dining</option>
+                <option value="fuel">Fuel</option>
+                <option value="electricity">Electricity</option>
+                <option value="Recharge">Recharge</option>
+                <option value="movie">Movie</option>
+                <option value="health">Health and fitness</option>
+            </select> <br> <br>
+            <input type="submit" value="Add Expense">
+        </form>
+        <ul id="expenseList"></ul>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"></script>
+        <script src="form.js"></script>
+
+    </div>
+</body>
+
+</html>
